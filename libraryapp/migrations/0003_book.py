@@ -6,21 +6,29 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('libraryapp', '0002_user_role'),
+        ("libraryapp", "0002_user_role"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Book',
+            name="Book",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=150)),
-                ('author', models.CharField(default='John Doe', max_length=100)),
-                ('isbn', models.CharField(max_length=13)),
-                ('pages', models.IntegerField()),
-                ('price', models.IntegerField()),
-                ('stock', models.IntegerField()),
-                ('description', models.TextField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=150)),
+                ("author", models.CharField(default="John Doe", max_length=100)),
+                ("isbn", models.CharField(max_length=13)),
+                ("pages", models.IntegerField()),
+                ("price", models.IntegerField()),
+                ("stock", models.IntegerField()),
+                ("description", models.TextField()),
             ],
         ),
     ]

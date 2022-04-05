@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from libraryapp.models import User,Book
+from libraryapp.models import User, Book
+
 
 class RegistrationSerializer(serializers.ModelSerializer):
 
@@ -21,6 +22,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
         user.set_password(validated_data["password"])
         user.save()
         return user
+
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
